@@ -1,0 +1,125 @@
+
+.body 
+{
+    padding:0px;
+    margin:111PX;
+}
+.first
+{
+    background-color: rgb(74, 94, 207);
+    width:100%;
+    height: 100px;
+}
+.second
+{
+    float: right;
+    margin-right: 350px;
+    margin-top: 30px;
+}
+.third
+{
+    float: left;
+    margin-left: 250px;
+    font-size: 20px;
+    color: aliceblue;
+}
+.fo
+{
+    position: absolute;
+    margin-top: 60px;
+      right: 470px;
+}
+.fo a
+{
+    color: rgb(178, 187, 240);
+}
+.leftf
+{
+    position: absolute;
+
+    top: 108px;
+    width: 49%;
+    height: 480px;
+    background-color: rgb(212, 211, 211);
+}
+.rightf
+{
+    width: 50.5%;
+    float: right;
+    margin-top: 48px;
+    height: 480px;
+    background-color:rgb(212, 211, 211);
+}
+.footer
+{
+    position: absolute;
+    top: 77.4%;
+    height: 22.5%;
+    width: 100%;
+}
+.rightf h1{
+    position: absolute;
+    color:rgb(56, 56, 56);
+    top: 90px;
+    margin-left: 20px;
+    font-size: 40px;
+}
+.rightf p
+{
+    position: absolute;
+    top: 145px;
+    color: rgb(136, 135, 135);
+    margin-left:20px;
+    font-size: 20px;    
+}
+.rightf input{
+    height: 35px;
+    border-radius: 7px;
+}
+.rightf input[placeholder="First Name"]
+{
+    width: 250px;
+    position: absolute;
+    top: 230px;
+}
+.rightf input[placeholder="Surname"]
+{
+    width: 250px;
+    position: absolute;
+    top: 230px;
+    right:250px;
+}
+.rightf input[placeholder="Mobile number or email address"]
+{
+    width: 525px;
+    position: absolute;
+    top: 280px;
+}
+.rightf input[placeholder="New Password"]
+{
+    width: 525px;
+    position: absolute;
+    top: 330px;
+}
+.rightf p[class="birthday"]
+{
+    position: absolute;
+    top: 360px;
+    color: black;
+    right: 690px;
+    font-size: 25px;
+}
+.right div[class="selected"]
+{
+    position: absolute;
+    padding: 100px;
+}
+.rightf a{
+    position: absolute;
+    top: 425px;
+    right: 440px; 
+}
+button
+{
+    background-color: rgb(10, 94, 10);
+}
