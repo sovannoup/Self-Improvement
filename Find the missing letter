@@ -1,0 +1,40 @@
+function findMissingLetter(array)
+{
+  for(var i=1 ; i<array.length ; i++) {
+    var c1 = array[i - 1];
+    var c2 = array[i];
+  
+    if (consecutiveChars(c1, c2) == true) {
+      continue;
+    }
+    
+    return nextChar(c1);
+  }
+}
+
+function consecutiveChars(a, b) {
+  var charCodeA = a.charCodeAt(0);
+  var charCodeB = b.charCodeAt(0);
+  
+  if (charCodeA == charCodeB - 1) {
+    return true;
+  }
+  
+  return false;
+}
+
+function nextChar(c) {
+  var charCode = c.charCodeAt(0);
+  var nextCharCode = charCode + 1;
+  
+  return String.fromCharCode(nextCharCode);
+  
+}
+
+        Best Practices1
+        Clever0
+    0
+    Fork
+    Compare with your solution
+    Link
+
