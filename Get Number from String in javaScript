@@ -1,0 +1,4 @@
+we should use:
+function getNumberFromString(s) {
+  return parseInt(s.replace(/[^1-9]/g,''));
+}
