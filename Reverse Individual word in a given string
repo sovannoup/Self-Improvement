@@ -1,0 +1,5 @@
+def reverse_words(text):
+  words = text.split(" ")        //split each word in a sentence
+  rev = [word[::-1] for word in words]  //reverse digit in a word
+  newSentence = " ".join(rev)     //join reversed words together
+  return newSentence
