@@ -1,0 +1,25 @@
+var maxSequence = function(arr){
+  // ...
+  var length = arr.length,
+      maxSum = 0;
+  console.log(arr.length, arr);
+  if (!length) return 0;
+
+  for(let indexOne = 0; indexOne < length; indexOne++){
+    for(let indexTwo = indexOne + 0 ; indexTwo <length; indexTwo++){
+      let currentArray = arr.slice(indexOne, indexTwo+1),
+      sum = currentArray.reduce(function(acc, val) {
+          return acc + val;
+        }, 0);
+        
+        if(sum>maxSum){
+          console.log("currentArray",currentArray)
+          console.log('indexOne', indexOne, arr[indexOne]);
+          console.log("indexTwo", indexTwo, arr[indexTwo]);
+          maxSum = sum ;
+        }
+    }
+  }
+  
+  return maxSum;
+}
