@@ -1,0 +1,27 @@
+function sum(n1, n2) {
+  return (parseInt(n1) || 0) + (parseInt(n2) || 0);
+}
+
+function sumStrings(a,b) { 
+  a = a.split("").reverse();
+  b = b.split("").reverse();
+  total = [];
+  var length = (a.length > b.length) ? a.length : b.length;
+  
+  //make the sum digit by digit
+  for (var i = 0; i < length; i++) {
+    s = sum(a[i], b[i]);
+    total[i] = sum(total[i], s);
+    if (total[i]>9) {
+      total[i] -= 10;
+      total[i+1] = 1;
+    }
+  }
+  
+  //remove fruitless zero
+  if (total[total.length-1] == 0) 
+    total[total.length-1] = "";
+    
+  //reverse the array and return the string
+  return total.reverse().join("");
+}
