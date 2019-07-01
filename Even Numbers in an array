@@ -1,0 +1,12 @@
+function evenNumbers(array, number) {
+ var EvenNumbers= [];
+ 
+ for(var i=0; i<=array.length; i++)
+  {
+      if(array[i] % 2 ==0)
+        EvenNumbers.push(array[i]);
+  }
+ 
+   return EvenNumbers.splice(EvenNumbers.length-number,number);
+   
+}
