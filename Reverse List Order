@@ -1,0 +1,8 @@
+def reverse_list(l):
+  return l[::-1]
+  ( or )
+  
+  def reverse_list(liste):
+    liste.reverse()
+    return liste
+  
