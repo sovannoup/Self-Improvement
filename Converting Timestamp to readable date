@@ -1,0 +1,10 @@
+import datetime
+
+
+def timestamp_to_str(stamp):
+    try:
+        time = datetime.datetime.fromtimestamp(int(stamp))
+        time.strftime('%Y-%m-%d %I:%M:%S')
+        return time
+    except:
+        return "Your timestamp is not valid."
