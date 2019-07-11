@@ -1,0 +1,7 @@
+def dict_count(lis):
+    if lis == "":
+        print("Your string is empty.")
+    else:
+        final = list(tuple((element, lis.count(element)) for element in set(lis)))
+        after_sort = sorted(final, key=lambda x: x[0])
+        return after_sort
