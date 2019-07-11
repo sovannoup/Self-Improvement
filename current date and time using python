@@ -1,0 +1,6 @@
+import datetime
+
+
+def current_date():
+    x = datetime.datetime.now()
+    return x.strftime("%Y-%m-%d %I:%M:%S")
