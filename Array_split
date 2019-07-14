@@ -1,0 +1,12 @@
+def array_split(lis):
+    if lis == "" or lis == [""]:
+        return "Empty string."
+    else:
+        final = []
+        for element in lis:
+            subjoin = []
+            for n in element:
+                n.split()
+                subjoin.append(n)
+            final.append(list(subjoin))
+        return final
