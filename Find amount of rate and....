@@ -1,0 +1,22 @@
+amount_input = input("Please enter your amount: \n")
+while not amount_input.isnumeric():
+    if amount_input.isnumeric() and int(amount_input) > 0:
+        break
+    print("Number is incorrect, try again. \n")
+    amount_input = input("Please enter your amount: \n")
+
+rate_input = input("Please enter tax rate: \n")
+while not rate_input.isnumeric() or (int(rate_input) < 1 or int(rate_input) > 100):
+    print("Rate is incorrect, try again.\n")
+    rate_input = input("Please enter tax rate: \n")
+
+total_tax = (int(amount_input) * int(rate_input)) / 100
+'{:.2f}'.format(total_tax)
+net = int(amount_input) - total_tax
+print("===== ===== ===== ===== =====\n")
+print("AMOUNT: " + str(amount_input) + "$\n")
+print("RATE: " + str(rate_input) + "%\n")
+print("===== ===== ===== ===== =====\n")
+print("TAX: " + str(total_tax) + "$")
+print("NET: " + str(net) + "$")
+print("===== ===== ===== ===== =====")
