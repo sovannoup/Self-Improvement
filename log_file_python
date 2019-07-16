@@ -1,0 +1,13 @@
+import datetime
+
+
+def log_file(filename):
+    inp = ""
+    while inp != "EXIT":
+        inp = input('$: ')
+        if inp == "EXIT":
+            break
+        f = open(filename, 'a')
+        x = datetime.datetime.now()
+        f.write(f'[{x.strftime("%d/%m/%Y %I:%M:%S")}] {inp}\n')
+        f.close()
