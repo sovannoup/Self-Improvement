@@ -1,0 +1,23 @@
+import os
+
+
+def create_folder(list_folder):
+    count = 0
+    if len(list_folder) == 0:
+        return count
+    for each in list_folder:
+        if os.path.exists(each):
+            answer = input("Are you sure you want to replace " + each + "? [Y/N]\n")
+            answer = answer.lower()
+            while answer != "y" or answer != "n":
+                if answer == 'y':
+                    os.rmdir(each)
+                    os.mkdir(each)
+                    count += 1
+                    break
+                elif answer == 'n':
+                    break
+        else:
+            os.mkdir(each)
+            count += 1
+    return count
