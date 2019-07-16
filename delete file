@@ -1,0 +1,14 @@
+import os, shutil
+
+def delete_file(each):
+    if os.path.exists(each):
+        answer = input("Are you sure you want to delete " + each + "? [Y/N]\n")
+        answer = answer.lower()
+        while answer != "y" or answer != "n":
+            if answer == 'y':
+                shutil.rmtree(each)
+                return 1
+            elif answer == 'n':
+                return 0
+    else:
+        return 0
