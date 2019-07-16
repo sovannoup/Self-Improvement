@@ -1,0 +1,23 @@
+import os
+
+
+def write_file(file_name, file_content):
+    if os.path.exists(file_name):
+        answer = input("Are you sure you want to replace " + file_name + "? [Y/N]\n")
+        answer = answer.lower()
+        while answer != "y" or answer != "n":
+            if answer == 'y':
+                f = open(file_name, 'r+')
+                f.truncate(0)
+                f.write(file_content)
+                return 1
+            elif answer == 'n':
+                return 0
+            else:
+                print("Invalid Option")
+                answer = input("Are you sure you want to replace " + file_name + "? [Y/N]\n")
+                answer = answer.lower()
+    else:
+        with open(file_name, 'a') as writer:
+            writer.write(file_content)
+            return 1
