@@ -1,0 +1,9 @@
+import os
+
+def read_file(file_name):
+    if os.path.exists(file_name):
+        file = open(file_name)
+        data = file.read()
+        return data
+    else:
+        return 'Invalid Filename'
