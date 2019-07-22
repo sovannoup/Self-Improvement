@@ -1,0 +1,13 @@
+import csv
+import json
+
+
+def tsv_to_json(tsv_file, json_file):
+    arr = []
+    with open(tsv_file) as f:
+        reader = csv.DictReader(f)
+        for rows in reader:
+            data = {'title': rows['title'], 'content': rows['content'], 'difficulty': rows['difficulty']}
+            arr.append(data)
+    with open(json_file, 'w') as jsonFile:
+        jsonFile.write(json.dumps(arr, indent=4))
