@@ -1,0 +1,5 @@
+def rec_revstr(string):
+    if len(string) == 0:
+        return string
+    else:
+        return rec_revstr(string[1:]) + string[0]
