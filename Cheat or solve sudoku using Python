@@ -1,0 +1,46 @@
+def find_zero(board, row, col):
+    num = 0
+    for i in range(0, 9):
+        for j in range(0, 9):
+            if board[i][j] == 0:
+                row = i
+                col = j
+                num = 1
+                a = [row, col, num]
+                return a
+    a = [-1, -1, num]
+    return a
+
+
+def check(board, number, row, col):
+    for i in range(9):
+        if board[row][i] == number:
+            return False
+
+    for i in range(9):
+        if board[i][col] == number:
+            return False
+    row_from = (row//3)*3
+    col_from = (col//3)*3
+    for x in range(row_from, row_from + 3):
+        for y in range(col_from, col_from+3):
+            if board[x][y] == number:
+                return False
+    return True
+
+
+def sudoku_solver(board):
+    row = 0
+    col = 0
+    a = find_zero(board, row, col)
+    if a[2] == 0:
+        return board
+    row = a[0]
+    col = a[1]
+    for number in range(1, 10):
+        if check(board, number, row, col):
+            board[row][col] = number
+            if sudoku_solver(board):
+                return board
+            board[row][col] = 0
+    return board
