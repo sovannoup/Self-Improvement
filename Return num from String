@@ -1,0 +1,4 @@
+function getNumberFromString(s) {
+  return parseInt(s.replace(/[^\d]+/g, ""), 10)
+}
+
